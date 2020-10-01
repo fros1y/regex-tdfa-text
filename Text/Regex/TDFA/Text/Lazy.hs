@@ -42,9 +42,6 @@ instance RegexContext Regex L.Text L.Text where
   match = polymatch
   matchM = polymatchM
 
-instance Uncons L.Text where
-  {- INLINE uncons #-}
-  uncons = L.uncons
 
 instance RegexMaker Regex CompOption ExecOption L.Text where
   makeRegexOptsM c e source = makeRegexOptsM c e (L.unpack source)

@@ -38,9 +38,6 @@ import Text.Regex.TDFA.NewDFA.Uncons(Uncons(uncons))
 import qualified Text.Regex.TDFA.NewDFA.Engine as Engine(execMatch)
 import qualified Text.Regex.TDFA.NewDFA.Tester as Tester(matchTest)
 
-instance Uncons T.Text where
-  {- INLINE uncons #-}
-  uncons = T.uncons
 
 instance RegexContext Regex T.Text T.Text where
   match = polymatch
